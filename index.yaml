@@ -941,6 +941,47 @@ entries:
     - https://raw.githubusercontent.com/cloudve/helm-charts/master/charts/galaxy-5.7.1.tgz
     version: 5.7.1
   - apiVersion: v2
+    appVersion: 23.0-sci35
+    created: "2023-04-28T08:54:25.741783+02:00"
+    dependencies:
+    - alias: postgresql
+      condition: postgresql.deploy
+      name: postgres-operator
+      repository: https://raw.githubusercontent.com/zalando/postgres-operator/master/charts/postgres-operator/
+      tags:
+      - deploy-postgres
+      version: 1.9.0
+    - alias: s3csi
+      condition: s3csi.deploy
+      name: csi-s3
+      repository: https://raw.githubusercontent.com/cloudve/helm-charts/master/
+      tags:
+      - deploy-s3csi
+      version: 0.35.2
+    - alias: cvmfs
+      condition: cvmfs.deploy
+      name: galaxy-cvmfs-csi
+      repository: https://raw.githubusercontent.com/cloudve/helm-charts/master/
+      tags:
+      - deploy-cvmfs
+      version: 2.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.deploy
+      name: rabbitmq-cluster-operator
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - deploy-rabbitmq
+      version: 2.6.12
+    description: Chart for Galaxy, an open, web-based platform for accessible, reproducible,
+      and transparent computational biomedical research.
+    digest: fb6e788d8db51f9a07429888dd544fc40fe5f75786d1777080b4dc10a2e83b3f
+    icon: https://galaxyproject.org/images/galaxy-logos/galaxy_project_logo_square.png
+    name: galaxy
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cloudve/helm-charts/master/charts/galaxy-5.7.1-sci35.tgz
+    version: 5.7.1-sci35
+  - apiVersion: v2
     appVersion: "23.0"
     created: "2023-04-26T10:46:04.893608+05:30"
     dependencies:
