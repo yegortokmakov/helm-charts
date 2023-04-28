@@ -979,7 +979,7 @@ entries:
     name: galaxy
     type: application
     urls:
-    - https://raw.githubusercontent.com/cloudve/helm-charts/master/charts/galaxy-5.7.1-sci35.tgz
+    - https://raw.githubusercontent.com/yegortokmakov/helm-charts/master/charts/galaxy-5.7.1-sci35.tgz
     version: 5.7.1-sci35
   - apiVersion: v2
     appVersion: "23.0"
